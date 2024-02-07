@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Стартово меню</title>
+</head>
+<body>
+    <div id="start-menu" class="popup popup-start">
+        <div class="popup-content">
+            <h2>Добре дошли в играта!</h2>
+            <h3>Въведете вашето име:</h3>
+            <input type="text" id="playerName" class="name-input" placeholder="Въведете името си">
+            <button onclick="startGame1()">Старт</button>
+        </div>
+    </div>
+
+    <div id="leaderboard" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLeaderboard()">&times;</span>
+            <h2>Класация</h2>
+            <ul id="leaderboard-list">
+                <!-- Тук ще се добавят играчите от класацията -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

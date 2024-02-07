@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Бикове и Крави</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div id="start-menu" class="popup">
+        <div class="popup-content">
+            <h2>Добре дошли в играта "Бикове и Крави"</h2>
+            <button onclick="startGame()">Нова игра</button>
+            <button onclick="showRules()">Правила</button>
+        </div>
+    </div>
+
+<audio id="bgMusic" loop autoplay>
+    <source src="Cow Music.mp4" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="audio-control">
+    <button class="sound-button" onclick="toggleAudio()">
+        <i class="fa-solid fa-volume-xmark"></i>
+    </button>
+</div>
+
+    <div id="game-container">
+        <h1>Бикове и Крави</h1>
+        <p>Опитайте се да отгатнете числото:</p>
+        <input type="text" id="guessInput" maxlength="4">
+        <button onclick="submitGuess()">Провери</button>
+        <p id="feedback"></p>
+    </div>
+
+    <div id="rules-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Правила на Бикове и Крави</h2>
+            <p>Отгатнете 4-цифрено число. Получавате "бик", ако цифра е на правилното място, и "крава", ако е на грешното. Играта завършва, когато отгатнете числото.</p>
+            <p>
+                Насладете се на играта и весело отгатване!
+            </p>
+        </div>
+    </div>
+
+    <div id="win-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeWinPopup()">&times;</span>
+            <h2>Поздравления! Вие спечелихте!</h2>
+            <p>Браво! Вие успешно отгатнахте числото. Играта приключи.</p>
+            <button onclick="resetGame()">Нова игра</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
